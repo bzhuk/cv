@@ -10,7 +10,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             background-color: #f4f7f6;
             color: #333;
@@ -18,46 +18,88 @@
         .container {
             text-align: center;
             background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            max-width: 400px;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            max-width: 420px;
             width: 90%;
         }
-        h1 { margin-bottom: 0.5rem; font-size: 1.5rem; }
-        p { color: #666; margin-bottom: 1.5rem; }
+        .profile-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1 { 
+            margin: 0 0 0.5rem 0; 
+            font-size: 1.8rem; 
+            color: #1a1a1a;
+        }
+        .subtitle { 
+            color: #666; 
+            margin-bottom: 2rem; 
+            font-size: 1rem;
+            line-height: 1.4;
+        }
         .btn {
             display: block;
-            padding: 12px 24px;
-            margin: 10px 0;
+            padding: 14px 24px;
+            margin: 12px 0;
             text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: 0.3s;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
         }
         .btn-primary {
             background-color: #2563eb;
             color: white;
         }
-        .btn-primary:hover { background-color: #1d4ed8; }
-        .btn-secondary {
-            background-color: #e5e7eb;
-            color: #374151;
+        .btn-primary:hover { 
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
         }
-        .btn-secondary:hover { background-color: #d1d5db; }
+        .btn-secondary {
+            background-color: #f3f4f6;
+            color: #374151;
+            border: 1px solid #e5e7eb;
+        }
+        .btn-secondary:hover { 
+            background-color: #e5e7eb;
+        }
+        .links {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+        .links a {
+            color: #2563eb;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <img src="enterprise_Bohdan_Zhuk.jpg" alt="Bohdan Zhuk" class="profile-photo">
+        
         <h1>Bohdan Zhuk</h1>
-        <p>Senior Frontend Engineer | Magento Specialist</p>
+        <p class="subtitle">Senior Frontend Engineer<br>Magento Specialist | Team Lead</p>
         
         <a href="Bohdan-Zhuk-Senior-Magento-Engineer.pdf" class="btn btn-primary">View Resume (PDF)</a>
-        <a href="Bohdan-Zhuk-Senior-Magento-Engineer.pdf" download class="btn btn-secondary">Download for HR Tools</a>
+        <a href="Bohdan-Zhuk-Senior-Magento-Engineer.pdf" download class="btn btn-secondary">Download PDF (for HR Tools)</a>
         
-        <div style="margin-top: 1.5rem; font-size: 0.8rem; color: #999;">
-            <a href="https://linkedin.com/in/bohdanzhuk" style="color: inherit;">LinkedIn</a> • 
-            <a href="https://github.com/bzhuk" style="color: inherit;">GitHub</a>
+        <div class="links">
+            <a href="https://linkedin.com/in/bohdanzhuk" target="_blank">LinkedIn</a>
+            <a href="https://github.com/bzhuk" target="_blank">GitHub</a>
         </div>
     </div>
 </body>
